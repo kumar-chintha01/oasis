@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:
+        Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+    background-color: rgb(246, 242, 238);
+}
+
+.center{
+    text-align: center;
+}
+#navbar{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    top: 0px;
+    height: 50px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+#navbar #logo img{
+    border-radius: 50%;
+    margin-left: 10px;
+}
+#navbar ul{
+    list-style: none;
+    display: flex;
+}
+
+#navbar a{
+    /* text-decoration: none;
+    color: white;
+    border-radius: 20px; */
+    padding-right: 2px;
+}
+#navbar a img{
+    height: 40px;
+}
+/* #navbar a:hover{
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    transition-duration: 1s;
+} */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.converter {
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(246, 242, 238);
+    border-radius: 10px;
+    box-shadow: 0px 0px 29px 10px rgba(87, 85, 85, 0.38);
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 32%;
+    text-align: center;
+    padding: 10px;
+}
+
+.col label {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    /* color: #fff; */
+}
+
+.col input {
+    width: 150px;
+    height: 30px;
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h1 {
+    color: rgb(20, 20, 18);
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.footer-section{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: antiquewhite;
+    /* box-shadow: horizontal vetical blur spread color */
+    box-shadow: 0px 0px 29px 10px rgba(87, 85, 85, 0.38);
+    
+}
+/* For mobiles */
+@media screen and (max-width: 492px) {
+    #navbar{
+        justify-content: center;
+    }
+    .converter{
+        flex-direction: column;
+    }
+    .footer-section{
+        position: relative
+    };
+}
